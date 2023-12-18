@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Application Form</title>
   </head>
   <body>
+    <div class="global-nav">
+      <ul>
+        <li><a href="#" target="_self">Apply</a></li>
+        <li><a href="./aboutMe.html" target="_blank">About Me</a></li>
+      </ul>
+    </div>
     <h2>Application Form</h2>
-    <p>Complete and fill the form details</p>
+    <p>Fill in your details</p>
     <form action="/applicationForm.html" method="post">
       <div class="firstName">
         <label for="firstName">First Name<span>*</span></label>
@@ -38,7 +44,7 @@
       </div><br>
       <div class="gender">
         <label for="options">Gender</label>
-        <select name="gender" id="gender">
+        <select name="gender" id="gender" required>
           <option slected value="">Select your gender</option>
           <option value="female">Female</option>
           <option value="male">Male</option>
@@ -47,7 +53,7 @@
       </div><br>
       <div class="dob">
         <label for="dob">Date of Birth<span>*</span></label>
-        <input type="date" name="dateOfBirth" id="dob" />
+        <input type="date" name="dateOfBirth" id="dob" required/>
       </div><br>
       <div class="email">
         <label for="email_Address">Email Address<span>*</span></label>
@@ -61,7 +67,7 @@
       </div><br>
       <div for="educationL">
         <label for="educationL">Education Level<span>*</span></label>
-        <select name="eduLevel" id="eduLevel">
+        <select name="eduLevel" id="eduLevel" required>
           <option selected value="">Select level of education </option>
           <option value="">Bsc</option>
           <option value="">Msc</option>
@@ -74,7 +80,7 @@
       </div><br>
       <div class="country">
         <label for="country">Country</label>
-        <select name="country_type" id="country_type">
+        <select name="country_type" id="country_type" required>
           <option slected value="">Country</option>
           <option data-countryCode="DZ" value="213">Algeria (+213)</option>
           <option data-countryCode="AD" value="376">Andorra (+376)</option>
@@ -300,23 +306,25 @@
           name="Residence"
           id="stateOfResidence"
           placeholder="Enter your state of residence"
+          required
         />
       </div><br>
       <div class="phoneNo">
         <label for="phoneNo">Phone Number</label>
-        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="08126079440" />
+        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="08126079440" required />
       </div><br>
       <div class="schoolSelection">
         <label for="school">Choose School</label>
-        <select name="school_Of_Study" id="school_Of_Study">
-            <option value="engineering">School Of Engineering</option>
-            <option value="engineering">School Of Product</option>
-            <option value="engineering">School Of Data</option>
+        <select name="school_Of_Study" id="school_Of_Study" required>
+          <option value="select" selected="selected">Select school</option>
+          <option value="engineering">School Of Engineering</option>
+          <option value="engineering">School Of Product</option>
+          <option value="engineering">School Of Data</option>
         </select>
       </div><br>
       <div class="course">
         <label for="course">Select Course Of Study</label>
-        <select name="course_Of-Study" id="course_Of_Study">
+        <select name="course_Of-Study" id="course_Of_Study" required>
           <option value="" selected>Select course</option>
             <option value="cloudEngr">Cloud Engineering</option>
             <option value="frontendEngr">Frontend Engineering</option>
@@ -325,7 +333,7 @@
       </div><br>
       <div class="info">
         <label for="info">How did you hear about us?<span>*</span></label>
-        <select name="medium" id="medium">
+        <select name="medium" id="medium" required>
           <option value="" selected>Select channel</option>
           <option value="twitter">Twitter</option>
           <option value="facebook">Facebook</option>
@@ -343,9 +351,9 @@
         <p>By clicking continue, I agree to <a href="#">Terms of Use</a>
           and acknowldege that I have read the <a href="#">Privacy policy</a>
         </p>
-      </div><br>
+      </div>
       <button type="submit">Proceed</button>
+      <p>Already have an account? <a href="#">Sign in</a></p>
     </form>
-    <p>Link to my <a href="./aboutMe.html">biography</a></p>
   </body>
 </html>
